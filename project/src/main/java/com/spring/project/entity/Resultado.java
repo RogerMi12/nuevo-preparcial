@@ -14,11 +14,11 @@ public class Resultado {
 	private Integer id;
 
 
-    @ManyToOne
+    
     @JoinColumn(name="partido_id")
 	private Integer partidoID;
 
-    @ManyToOne
+    
     @JoinColumn(name="seleccion_id")
     private Integer seleccionID;
     
