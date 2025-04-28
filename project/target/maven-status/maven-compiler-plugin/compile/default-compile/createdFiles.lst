@@ -1,0 +1,13 @@
+com\spring\project\controller\HealthController.class
+com\spring\project\repositories\TipoPersonaRepository.class
+com\spring\project\models\Personal.class
+com\spring\project\config\WebConfig.class
+com\spring\project\ProjectApplication.class
+com\spring\project\models\TipoPersona.class
+com\spring\project\repositories\FuncionRepository.class
+com\spring\project\controller\TipoPersonaController.class
+com\spring\project\models\Funcion.class
+com\spring\project\controller\UsuarioController.class
+com\spring\project\models\Usuario.class
+com\spring\project\repositories\PersonalRepository.class
+com\spring\project\services\UsuarioService.class
