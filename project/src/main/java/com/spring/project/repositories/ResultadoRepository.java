@@ -8,6 +8,6 @@ import com.spring.project.entity.Resultado;
 
 public interface ResultadoRepository extends JpaRepository<Resultado, Integer> {
 
-    public List<Resultado> findBySeleccion(int seleccionID);
+    public List<Resultado> findBySeleccion_Id(int seleccionId);
 
 }
