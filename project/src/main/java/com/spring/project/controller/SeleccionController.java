@@ -28,6 +28,9 @@ public class SeleccionController {
     @Autowired
     private SeleccionService ss;
 
+    @AutoWired
+    private ResultadoService rs;
+
     @PostMapping
     public Seleccion crear(@RequestBody Seleccion seleccion) {
         return ss.crearSeleccion(seleccion);
@@ -76,7 +79,7 @@ public class SeleccionController {
 
     @GetMapping("/selecciones/{id}/resultados")
     public List<Resultado> getResultados(@PathVariable int id) {
-        return ResultadoService.getResultados(id);
+        return rs.getResultados(id);
     }
     
 
