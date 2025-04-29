@@ -16,7 +16,7 @@ public class Seleccion {
 	private String nombre;
 
 	
-    @JoinColumn(name="continente_id")
+   
 	private int continenteID;
 
 
