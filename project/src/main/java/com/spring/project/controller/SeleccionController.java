@@ -41,8 +41,8 @@ public class SeleccionController {
         return ss.listarSelecciones();
     }
 
-    @PutMapping
-    public ResponseEntity<Seleccion> actualizar(@RequestBody Seleccion seleccion, int id) {
+    @PutMapping("/{id}")
+    public ResponseEntity<Seleccion> actualizar(@RequestBody Seleccion seleccion,@PathVariable int id) {
         try {
             ss.actualizarSeleccion(seleccion, id);
         } catch (Exception e) {            
