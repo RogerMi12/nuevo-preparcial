@@ -28,7 +28,7 @@ public class SeleccionController {
     @Autowired
     private SeleccionService ss;
 
-    @AutoWired
+    @Autowired
     private ResultadoService rs;
 
     @PostMapping
