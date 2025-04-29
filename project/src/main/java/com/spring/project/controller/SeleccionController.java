@@ -51,7 +51,7 @@ public class SeleccionController {
         return ResponseEntity.ok(seleccion);
     }
 
-    @GetMapping("/selecciones/{id}")
+    @GetMapping("/{id}")
     public Seleccion getSeleccion(@PathVariable int id) {
         Seleccion tmp = null;
         try {
@@ -62,7 +62,7 @@ public class SeleccionController {
         return tmp;
     }
 
-    @DeleteMapping("/selecciones/{id}")
+    @DeleteMapping("/{id}")
     public void eliminar(@PathVariable int id) {
 
         try {
@@ -72,12 +72,12 @@ public class SeleccionController {
         }
     }
 
-    @GetMapping("/selecciones/grupo/{grupo}")
-    public List<Seleccion> getResultadosSeleccion(@PathVariable String c) {
-        return ss.listarGrupo(c);
+    @GetMapping("/grupo/{grupo}")
+    public List<Seleccion> getResultadosSeleccion(@PathVariable String grupo) {
+        return ss.listarGrupo(grupo);
     }
 
-    @GetMapping("/selecciones/{id}/resultados")
+    @GetMapping("/{id}/resultados")
     public List<Resultado> getResultados(@PathVariable int id) {
         return rs.getResultadosID(id);
     }
