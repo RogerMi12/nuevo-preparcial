@@ -13,7 +13,7 @@ public class ResultadoService {
     private ResultadoRepository rr;
 
     public List<Resultado> getResultados(int id)  {
-        return rr.findBySeleccion(id);
+        return rr.findBySeleccionID(id);
     }  
 
 }
