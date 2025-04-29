@@ -10,9 +10,9 @@ import com.spring.project.repositories.ResultadoRepository;
 public class ResultadoService {
 
      @Autowired
-    private static ResultadoRepository rr;
+    private ResultadoRepository rr;
 
-    public static List<Resultado> getResultados(int id)  {
+    public List<Resultado> getResultados(int id)  {
         return rr.findBySeleccion(id);
     }  
 
