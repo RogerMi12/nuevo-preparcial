@@ -76,11 +76,24 @@ public class SeleccionController {
     public List<Seleccion> getResultadosSeleccion(@PathVariable String grupo) {
         return ss.listarGrupo(grupo);
     }
-
+    
     @GetMapping("/{id}/resultados")
-    public List<Resultado> getResultados(@PathVariable int id) {
-        return rs.getResultadosID(id);
+public List<ResultadoDTO> getResultados(@PathVariable int id) {
+    List<Resultado> resultados = rs.getResultadosID(id);
+    List<ResultadoDTO> dtos = new ArrayList<>();
+
+    for (Resultado r : resultados) {
+        ResultadoDTO dto = new ResultadoDTO(
+            r.getSeleccion().getNombre(),  // Nombre de la selección
+            r.getGoles(),
+            r.getAmarillas(),
+            r.getRojas()
+        );
+        dtos.add(dto);
     }
+
+    return dtos;
+}
     
 
 
