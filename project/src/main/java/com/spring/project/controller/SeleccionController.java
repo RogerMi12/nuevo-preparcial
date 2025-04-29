@@ -79,7 +79,7 @@ public class SeleccionController {
 
     @GetMapping("/selecciones/{id}/resultados")
     public List<Resultado> getResultados(@PathVariable int id) {
-        return rs.getResultados(id);
+        return rs.getResultadosID(id);
     }
     
 
