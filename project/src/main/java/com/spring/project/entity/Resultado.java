@@ -15,11 +15,11 @@ public class Resultado {
 
 
     
-    @JoinColumn(name="partido_id")
+  
 	private Integer partidoID;
 
     
-    @JoinColumn(name="seleccion_id")
+    
     private Integer seleccionID;
     
     private Integer goles;
